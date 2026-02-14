@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>CS Interactive Scoreboard</title>
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<h1 class="page-title">Counter Strike</h1>
+
+<!-- TAB BAR -->
+<div class="tab-bar">
+    <div class="tab active" data-tab="avg">AVG STATS</div>
+    <div class="tab" data-tab="veto">VETO</div>
+    <div id="tab-underline"></div>
+</div>
+
+<!-- TAB CONTENT AREAS -->
+<div id="tab-avg" class="tab-content activeTab"></div>
+<div id="tab-veto" class="tab-content"></div>
+
+<!-- JS -->
+<script src="js/tabs/avg.js"></script>
+<script src="js/tabs/mapvetos.js"></script>
+<script src="js/init.js?v=1006"></script>
+
+</body>
+</html>

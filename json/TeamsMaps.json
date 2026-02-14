@@ -1,0 +1,128 @@
+{
+    "teams": {
+      "faze": {
+        "name": "faze",
+        "active": true,
+        "players": ["karrigan", "frozen", "twistzz", "broky", "jcobb"]
+      },
+      "vitality": {
+        "name": "vitality",
+        "active": true,
+        "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
+      },
+      "furia": {
+        "name": "furia",
+        "active": true,
+        "players": ["falleN", "yuurih", "YEKINDAR", "KSCERATO", "molodoy"]
+      },
+      "liquid": {
+        "name": "liquid",
+        "active": true,
+        "players": ["Krimbo", "EliGE", "NertZ", "siuhy", "ultimate"]
+      },
+      "mouz": {
+        "name": "mouz",
+        "active": true,
+        "players": ["Brollan", "torzi", "Spinx", "jimpphat", "xertioN"]
+      },
+      "aurora": {
+        "name": "aurora",
+        "active": false,
+        "players": ["MAJ3R", "XANTARES", "woxic", "soulfly", "Wicadia"]
+      },
+      "spirit": {
+        "name": "spirit",
+        "active": false,
+        "players": ["sh1ro", "magixx", "tN1R", "zont1x", "donk"]
+      },
+      "g2": {
+        "name": "g2",
+        "active": true,
+        "players": ["huNter-", "malbsMd", "SunPayus", "HeavyGod", "MATYS"]
+      },
+      "navi": {
+        "name": "natus vincere",
+        "active": true,
+        "players": ["Aleksib", "iM", "b1t", "w0nderful", "makazze"]
+      },
+      "mongolz": {
+        "name": "the mongolz",
+        "active": true,
+        "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
+      },
+      "falcons": {
+        "name": "falcons",
+        "active": true,
+        "players": ["kyousuke", "NiKo", "m0NESY", "TeSeS", "kyxsan"]
+      },
+      "astralis": {
+        "name": "astralis",
+        "active": true,
+        "players": ["HooXi", "phzy", "jabbi", "Staehr", "ryu"]
+      },
+      "parivision": {
+        "name": "parivision",
+        "active": true,
+        "players": ["jame", "BELCHONOKK", "xiELO", "nota", "zweih"]
+      },
+      "3dmax": {
+        "name": "3dmax",
+        "active": true,
+        "players": ["bodyy", "Maka", "Lucky", "Ex3rcice", "Graviti"]
+      },
+      "passion": {
+        "name": "passion UA",
+        "active": false,
+        "players": ["jT", "hallzerk", "Grim", "Kvem", "nicx"]
+      },
+      "fut": {
+        "name": "fut",
+        "active": true,
+        "players": ["dem0n", "lauNX", "Krabeni", "cmtry", "dziugss"]
+      },
+      "b8": {
+        "name": "b8",
+        "active": true,
+        "players": ["alex666", "npl", "kensizor", "esenthial", "s1zzi"]
+      },
+      "pain": {
+        "name": "pain",
+        "active": true,
+        "players": ["vsm", "biguzera", "piriajr", "nqz", "snow"]
+      },
+      "bc.game": {
+        "name": "bc.game",
+        "active": false,
+        "players": ["krazy", "s1mple", "electroNic", "aragornN", "MUTiRiS"]
+      },
+      "nrg": {
+        "name": "nrg",
+        "active": false,
+        "players": ["Sonic", "brO", "oSee", "jeorge", "nitrO"]
+      },
+      "gamerlegion": {
+        "name": "gamerlegion",
+        "active": false,
+        "players": ["Snax", "REZ", "Tauson", "PR", "hypex"]
+      },
+      "heroic": {
+        "name": "heroic",
+        "active": true,
+        "players": ["nilo", "xflOud", "yxngstxr", "Chr1zN", "susp"]
+      }
+    },
+  
+    "maps": [
+      { "id":"mirage","name":"mirage","image":"maps/mirage.png","active":true },
+      { "id":"inferno","name":"inferno","image":"maps/inferno.png","active":true },
+      { "id":"nuke","name":"nuke","image":"maps/nuke.png","active":true },
+      { "id":"dust2","name":"dust2","image":"maps/dust2.png","active":true },
+      { "id":"overpass","name":"overpass","image":"maps/overpass.png","active":true },
+      { "id":"anubis","name":"anubis","image":"maps/anubis.png","active":true },
+      { "id":"ancient","name":"ancient","image":"maps/ancient.png","active":true },
+      { "id":"train","name":"train","image":"maps/train.png","active":false },
+      { "id":"vertigo","name":"vertigo","image":"maps/vertigo.png","active":false }
+    ]
+    
+}
+  

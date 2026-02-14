@@ -1,0 +1,492 @@
+/* ============================================================
+   GLOBAL STYLING
+============================================================ */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bp-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #4caf50; /* green */
+}
+
+/* ============================================================
+   TAB BAR
+============================================================ */
+.tab-bar {
+    display: flex;
+    border-bottom: 2px solid #444;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+.tab.active {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+#tab-underline {
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    background-color: #4caf50;
+    transition: all 0.2s;
+}
+
+/* ============================================================
+   VIEW TOGGLE
+============================================================ */
+.gm-view-toggle {
+    display: flex;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.gm-view-btn {
+    flex: 1;
+    padding: 8px;
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #fff;
+}
+
+.gm-view-btn.active {
+    background-color: #4caf50;
+    color: #000;
+    border-color: #4caf50;
+}
+
+/* ============================================================
+   MAP GRID — 4 per row, last row centered
+============================================================ */
+.gm-map-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+    justify-content: center; /* centers incomplete last row */
+}
+
+.gm-map-card {
+    background-color: #1e1e1e;
+    border: 2px solid #444;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 6px;
+}
+
+.gm-map-card img.map-thumb {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.gm-map-card.active {
+    border-color: #4caf50;
+    box-shadow: 0 0 12px #4caf50;
+}
+
+@media (max-width: 600px) {
+    .gm-map-grid {
+        grid-template-columns: repeat(4, 1fr); /* shrink to fit 4 per row */
+    }
+}
+
+/* ============================================================
+   TEAM GRID — 4 per row
+============================================================ */
+.team-toggle-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.team-toggle-btn {
+    background:#1e1e1e;
+    border:2px solid #444;
+    border-radius:8px;
+    text-align:center;
+    padding:8px;
+    cursor:pointer;
+    transition:all 0.2s;
+}
+
+.team-toggle-btn:hover {
+    border-color:#4caf50;
+    box-shadow:0 0 10px #4caf50;
+    transform:translateY(-2px);
+}
+
+.team-toggle-btn.active {
+    border-color:#4caf50;
+    box-shadow:0 0 12px #4caf50;
+}
+
+/* TEAM LOGO + NAME */
+.team-toggle-logo {
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    margin-bottom:4px;
+}
+
+.team-toggle-name {
+    font-size:0.9rem;
+    color:#fff;
+    text-transform: uppercase; /* full caps */
+}
+
+/* ============================================================
+   VS DROPDOWN (ONLY SHOW IN VS OPPONENT VIEW)
+============================================================ */
+#vs-controls {
+    display: none;       /* hidden by default */
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+#vs-controls.show {
+    display: flex;       /* row with dropdowns */
+    justify-content: space-between;
+    align-items: center;
+}
+
+#vs-controls.show select {
+    flex: 1;             /* fill the available row */
+    min-width: 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid #4caf50;
+    background-color: #000;
+    color: #4caf50;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#vs-controls.show select:hover,
+#vs-controls.show select:focus {
+    background-color: #4caf50;
+    color: #000;
+    box-shadow: 0 0 8px #4caf50;
+}
+
+#vs-controls.show .vs-text {
+    margin: 0 10px;
+    color: #4caf50;
+    font-weight: bold;
+    flex: 0;
+    text-align: center;
+}
+
+#vs-controls.show option {
+    background-color: #000;
+    color: #4caf50;
+}
+
+/* ============================================================
+   PLAYER CARDS
+============================================================ */
+.player-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:16px;
+    margin-top:15px;
+}
+
+.player-card{
+    background:#111;
+    border-radius:12px;
+    padding:14px;
+    box-shadow:0 0 10px rgba(0,0,0,.4);
+}
+
+.player-card h3{
+    margin-bottom:10px;
+    text-align:center;
+    text-transform: uppercase; /* full caps */
+}
+
+.stat-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:6px;
+    font-size:14px;
+}
+
+.stat-grid div{
+    background:#1a1a1a;
+    padding:6px;
+    border-radius:6px;
+}
+
+.stat-footer{
+    text-align:center;
+    margin-top:10px;
+    font-size:12px;
+    opacity:.7;
+}
+/* ============================================================
+   TAB CONTENT VISIBILITY (CRITICAL)
+============================================================ */
+.tab-content {
+    display: none;
+}
+
+.tab-content.activeTab {
+    display: block;
+}
+
+/* ===============================
+   VETO LAYOUT FIXES
+================================ */
+
+/* Top VS row */
+.logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 25px 0;
+}
+
+/* Team block (logo + name) */
+.team-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 140px;
+}
+
+.team-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background: #111;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.team-name {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ===============================
+   MAP ROW — 3 COLUMN LAYOUT
+================================ */
+
+.veto-stats-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+/* Map centered */
+.map-img {
+    width: 260px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+    transition: transform 0.2s ease;
+}
+
+.map-img:hover {
+    transform: scale(1.05);
+}
+
+/* Stats blocks */
+.team-stats {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.95;
+    min-width: 180px;
+}
+
+/* Left side (Team A) */
+.team-stats:first-child {
+    text-align: right;
+}
+
+/* Right side (Team B) */
+.team-stats:last-child {
+    text-align: left;
+}
+
+
+/* Divider */
+hr {
+    border: none;
+    border-top: 1px solid #2a2a2a;
+    margin: 30px 0;
+}
+
+/* ===============================
+   DROPDOWNS (MAJOR UPGRADE)
+================================ */
+
+#mapveto-controls {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+#mapveto-controls select {
+    background: #111;
+    color: #4caf50;
+    border: 2px solid #4caf50;
+    padding: 12px 16px;
+    font-size: 15px;
+    border-radius: 10px;
+    min-width: 220px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+#mapveto-controls select:hover {
+    background: #181818;
+}
+
+#mapveto-controls select:focus {
+    box-shadow: 0 0 10px #4caf50;
+}
+
+/* Dropdown options */
+select option {
+    background: #111;
+    color: white;
+}
+/* Toggle buttons */
+#modeToggle {
+    display: flex;
+    gap: 10px;
+}
+
+.mode-btn {
+    background: #111;
+    border: 2px solid #2a2a2a;
+    color: #aaa;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.mode-btn:hover {
+    border-color: #4caf50;
+    color: #4caf50;
+}
+
+.mode-btn.active {
+    background: #4caf50;
+    color: black;
+    border-color: #4caf50;
+}
+
+/* ===============================
+   TOGGLE CENTERING
+================================ */
+
+#modeToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Optional: make buttons look nicer centered */
+.mode-btn {
+    min-width: 140px;
+    text-align: center;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .veto-stats-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;   /* center the whole row */
+        align-items: center;       /* vertical alignment */
+        gap: 12px;
+        margin: 20px 0;
+        padding: 12px;
+        background: #0f0f0f;
+        border-radius: 16px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    }
+
+    .left-stats, .right-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        flex: 0 0 auto;           /* prevent flex from stretching too much */
+        max-width: 100px;          /* optional: limit width of stats */
+    }
+
+    .map-img {
+        width: 180px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid #2a2a2a;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        margin: 0 10px;           /* space between map and stats */
+        flex-shrink: 0;
+    }
+
+    .team-logo {
+        width: 50px;
+        height: 50px;
+        padding: 4px;
+    }
+
+    #mapveto-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
