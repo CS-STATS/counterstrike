@@ -726,5 +726,117 @@
             "Pick1: inferno",
             "Ban2: nuke"
         ]
+    },
+    {
+        "3dmax": [
+            "Ban1: mirage",
+            "Pick1: nuke",
+            "Ban2: dust2"
+        ],
+        "Decider": "inferno",
+        "Series": "BO3",
+        "astralis": [
+            "Ban1: anubis",
+            "Pick1: overpass",
+            "Ban2: ancient"
+        ]
+    },
+    {
+        "Decider": "dust2",
+        "Series": "BO3",
+        "mouz": [
+            "Ban1: anubis",
+            "Pick1: inferno",
+            "Ban2: nuke"
+        ],
+        "navi": [
+            "Ban1: overpass",
+            "Pick1: mirage",
+            "Ban2: ancient"
+        ]
+    },
+    {
+        "Decider": "dust2",
+        "Series": "BO3",
+        "g2": [
+            "Ban1: overpass",
+            "Pick1: inferno",
+            "Ban2: ancient"
+        ],
+        "parivision": [
+            "Ban1: nuke",
+            "Pick1: mirage",
+            "Ban2: anubis"
+        ]
+    },
+    {
+        "Decider": "ancient",
+        "Series": "BO3",
+        "falcons": [
+            "Ban1: overpass",
+            "Pick1: dust2",
+            "Ban2: inferno"
+        ],
+        "faze": [
+            "Ban1: mirage",
+            "Pick1: anubis",
+            "Ban2: nuke"
+        ]
+    },
+    {
+        "Decider": "dust2",
+        "Series": "BO3",
+        "aurora": [
+            "Ban1: ancient",
+            "Pick1: anubis",
+            "Ban2: inferno"
+        ],
+        "pain": [
+            "Ban1: overpass",
+            "Pick1: nuke",
+            "Ban2: mirage"
+        ]
+    },
+    {
+        "Decider": "anubis",
+        "Series": "BO3",
+        "furia": [
+            "Ban1: ancient",
+            "Pick1: overpass",
+            "Ban2: nuke"
+        ],
+        "fut": [
+            "Ban1: inferno",
+            "Pick1: mirage",
+            "Ban2: dust2"
+        ]
+    },
+    {
+        "Decider": "mirage",
+        "Series": "BO3",
+        "b8": [
+            "Ban1: overpass",
+            "Pick1: ancient",
+            "Ban2: dust2"
+        ],
+        "heroic": [
+            "Ban1: anubis",
+            "Pick1: nuke",
+            "Ban2: inferno"
+        ]
+    },
+    {
+        "Decider": "nuke",
+        "Series": "BO3",
+        "mongolz": [
+            "Ban1: anubis",
+            "Pick1: mirage",
+            "Ban2: inferno"
+        ],
+        "vitality": [
+            "Ban1: ancient",
+            "Pick1: dust2",
+            "Ban2: overpass"
+        ]
     }
 ]
