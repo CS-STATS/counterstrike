@@ -1034,5 +1034,47 @@
             "Pick1: dust2",
             "Ban4: anubis"
         ]
+    },
+    {
+        "Decider": "inferno",
+        "Series": "BO3",
+        "astralis": [
+            "Ban1: anubis",
+            "Pick1: overpass",
+            "Ban4: mirage"
+        ],
+        "aurora": [
+            "Ban2: ancient",
+            "Pick2: dust2",
+            "Ban3: nuke"
+        ]
+    },
+    {
+        "Decider": "ancient",
+        "Series": "BO3",
+        "fut": [
+            "Ban2: inferno",
+            "Pick2: mirage",
+            "Ban3: anubis"
+        ],
+        "parivision": [
+            "Ban1: nuke",
+            "Pick1: dust2",
+            "Ban4: overpass"
+        ]
+    },
+    {
+        "Decider": "inferno",
+        "Series": "BO3",
+        "g2": [
+            "Ban1: nuke",
+            "Pick1: dust2",
+            "Ban4: anubis"
+        ],
+        "navi": [
+            "Ban2: overpass",
+            "Pick2: ancient",
+            "Ban3: mirage"
+        ]
     }
 ]

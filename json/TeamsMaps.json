@@ -7,12 +7,12 @@
       },
       "vitality": {
         "name": "vitality",
-        "active": false,
+        "active": true,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
         "name": "furia",
-        "active": false,
+        "active": true,
         "players": ["falleN", "yuurih", "YEKINDAR", "KSCERATO", "molodoy"]
       },
       "liquid": {
@@ -22,7 +22,7 @@
       },
       "mouz": {
         "name": "mouz",
-        "active": false,
+        "active": true,
         "players": ["Brollan", "torzi", "Spinx", "jimpphat", "xertioN"]
       },
       "aurora": {
@@ -37,7 +37,7 @@
       },
       "g2": {
         "name": "g2",
-        "active": true,
+        "active": false,
         "players": ["huNter-", "malbsMd", "SunPayus", "HeavyGod", "MATYS"]
       },
       "navi": {
@@ -47,17 +47,17 @@
       },
       "mongolz": {
         "name": "the mongolz",
-        "active": false,
+        "active": true,
         "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
       },
       "falcons": {
         "name": "falcons",
-        "active": false,
+        "active": true,
         "players": ["kyousuke", "NiKo", "m0NESY", "TeSeS", "kyxsan"]
       },
       "astralis": {
         "name": "astralis",
-        "active": true,
+        "active": false,
         "players": ["HooXi", "phzy", "jabbi", "Staehr", "ryu"]
       },
       "parivision": {
@@ -77,7 +77,7 @@
       },
       "fut": {
         "name": "fut",
-        "active": true,
+        "active": false,
         "players": ["dem0n", "lauNX", "Krabeni", "cmtry", "dziugss"]
       },
       "b8": {
