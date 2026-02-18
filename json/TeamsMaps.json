@@ -2,32 +2,32 @@
     "teams": {
       "faze": {
         "name": "faze",
-        "active": true,
+        "active": false,
         "players": ["karrigan", "frozen", "twistzz", "broky", "jcobb"]
       },
       "vitality": {
         "name": "vitality",
-        "active": true,
+        "active": false,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
         "name": "furia",
-        "active": true,
+        "active": false,
         "players": ["falleN", "yuurih", "YEKINDAR", "KSCERATO", "molodoy"]
       },
       "liquid": {
         "name": "liquid",
-        "active": true,
+        "active": false,
         "players": ["Krimbo", "EliGE", "NertZ", "siuhy", "ultimate"]
       },
       "mouz": {
         "name": "mouz",
-        "active": true,
+        "active": false,
         "players": ["Brollan", "torzi", "Spinx", "jimpphat", "xertioN"]
       },
       "aurora": {
         "name": "aurora",
-        "active": false,
+        "active": true,
         "players": ["MAJ3R", "XANTARES", "woxic", "soulfly", "Wicadia"]
       },
       "spirit": {
@@ -47,12 +47,12 @@
       },
       "mongolz": {
         "name": "the mongolz",
-        "active": true,
+        "active": false,
         "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
       },
       "falcons": {
         "name": "falcons",
-        "active": true,
+        "active": false,
         "players": ["kyousuke", "NiKo", "m0NESY", "TeSeS", "kyxsan"]
       },
       "astralis": {
@@ -67,7 +67,7 @@
       },
       "3dmax": {
         "name": "3dmax",
-        "active": true,
+        "active": false,
         "players": ["bodyy", "Maka", "Lucky", "Ex3rcice", "Graviti"]
       },
       "passion": {
@@ -82,12 +82,12 @@
       },
       "b8": {
         "name": "b8",
-        "active": true,
+        "active": false,
         "players": ["alex666", "npl", "kensizor", "esenthial", "s1zzi"]
       },
       "pain": {
         "name": "pain",
-        "active": true,
+        "active": false,
         "players": ["vsm", "biguzera", "piriajr", "nqz", "snow"]
       },
       "bc.game": {
@@ -107,7 +107,7 @@
       },
       "heroic": {
         "name": "heroic",
-        "active": true,
+        "active": false,
         "players": ["nilo", "xflOud", "yxngstxr", "Chr1zN", "susp"]
       }
     },

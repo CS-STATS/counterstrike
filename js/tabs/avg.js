@@ -1,22 +1,24 @@
 // ============================================================
 // CS AVG STATS TAB — FULL VERSION
 // Overall + Vs Opponent + Player Cards + Team Logos
+// + Overtime Toggle (JS-only)
+// + Correct OT Opponent Summary (deduped maps)
 // ============================================================
 
 window.matchData = [];
 
 function norm(v){ return String(v).toLowerCase().trim(); }
-function cap(v){ return String(v).toUpperCase(); } // FULL uppercase
+function cap(v){ return String(v).toUpperCase(); }
 
 function buildModeTabs(_, teamsJSON){
 
-    const root = document.getElementById("tab-avg");
+    const root=document.getElementById("tab-avg");
     if(!root) return;
 
-    const teams = teamsJSON.teams;
-    const maps = teamsJSON.maps;
+    const teams=teamsJSON.teams;
+    const maps=teamsJSON.maps;
 
-    root.innerHTML = `
+    root.innerHTML=`
         <div class="modes-container">
             <div class="gm-view-toggle">
                 <button id="view-overall" class="gm-view-btn active">Overall Avg</button>
@@ -33,101 +35,88 @@ function buildModeTabs(_, teamsJSON){
                 <span class="vs-text">VS</span>
                 <select id="opp-dd"></select>
             </div>
-            
-            <div id="team-toggle-wrapper" class="team-toggle-wrapper"></div>
 
+            <div id="team-toggle-wrapper" class="team-toggle-wrapper"></div>
             <div id="gm-results"></div>
         </div>
     `;
 
-    const results = document.getElementById("gm-results");
-    const mapGrid = document.getElementById("map-grid");
-    const teamWrapper = document.getElementById("team-toggle-wrapper");
+    const results=document.getElementById("gm-results");
+    const mapGrid=document.getElementById("map-grid");
+    const teamWrapper=document.getElementById("team-toggle-wrapper");
 
-    const vsControls = document.getElementById("vs-controls");
-    const teamDD = document.getElementById("team-dd");
-    const oppDD = document.getElementById("opp-dd");
+    const vsControls=document.getElementById("vs-controls");
+    const teamDD=document.getElementById("team-dd");
+    const oppDD=document.getElementById("opp-dd");
 
-    const btnOverall = document.getElementById("view-overall");
-    const btnVs = document.getElementById("view-vs");
+    const btnOverall=document.getElementById("view-overall");
+    const btnVs=document.getElementById("view-vs");
 
     let VIEW="overall";
     let GM_TEAM=null, GM_MAP=null, GM_OPP=null;
+    let OT_MODE="include";
 
     // ================= VIEW SWITCH =================
-    btnOverall.onclick = () => {
-        VIEW = "overall";
+    btnOverall.onclick=()=>{
+        VIEW="overall";
         btnOverall.classList.add("active");
         btnVs.classList.remove("active");
-
-        teamWrapper.style.display = "grid";     // show team buttons
-        vsControls.classList.remove("show");    // hide VS dropdowns
-        results.innerHTML = "";
+        teamWrapper.style.display="grid";
+        vsControls.classList.remove("show");
+        results.innerHTML="";
     };
 
-    btnVs.onclick = () => {
-        VIEW = "vs";
+    btnVs.onclick=()=>{
+        VIEW="vs";
         btnVs.classList.add("active");
         btnOverall.classList.remove("active");
-
-        teamWrapper.style.display = "none";     // hide team buttons
-        vsControls.classList.add("show");       // show VS dropdowns
-        results.innerHTML = "";
+        teamWrapper.style.display="none";
+        vsControls.classList.add("show");
+        results.innerHTML="";
     };
 
     // ================= MAP GRID =================
     function loadMapGrid(){
         mapGrid.innerHTML="";
-        if(!maps || !Array.isArray(maps)){
-            console.error("Maps missing!");
-            return;
-        }
+        maps.filter(m=>m.active!==false)
+        .forEach(mapObj=>{
+            const card=document.createElement("div");
+            card.className="gm-map-card";
 
-        maps
-          .filter(m => m.active !== false)
-          .forEach(mapObj=>{
-              const card=document.createElement("div");
-              card.className="gm-map-card";
+            card.innerHTML=`
+                <img src="${mapObj.image}" class="map-thumb">
+                <div>${cap(mapObj.name)}</div>
+            `;
 
-              card.innerHTML=`
-                  <img src="${mapObj.image}" class="map-thumb">
-                  <div>${cap(mapObj.name)}</div>
-              `;
-
-              card.onclick=()=>{
-                  GM_MAP=mapObj.id;
-                  document.querySelectorAll(".gm-map-card")
+            card.onclick=()=>{
+                GM_MAP=mapObj.id;
+                document.querySelectorAll(".gm-map-card")
                     .forEach(c=>c.classList.remove("active"));
-                  card.classList.add("active");
-                  render();
-              };
+                card.classList.add("active");
+                render();
+            };
 
-              mapGrid.appendChild(card);
-          });
+            mapGrid.appendChild(card);
+        });
     }
-
     loadMapGrid();
 
     // ================= TEAM BUTTONS =================
     function loadTeamButtons(){
         teamWrapper.innerHTML="";
-    
         Object.entries(teams)
-          .filter(([key,t]) => t.active !== false)
-          .forEach(([team,t])=>{
-    
+        .filter(([k,t])=>t.active!==false)
+        .forEach(([team,t])=>{
             const btn=document.createElement("div");
             btn.className="team-toggle-btn";
-    
+
             btn.innerHTML=`
-                <img 
-                    src="teams/${team}.webp"
-                    class="team-toggle-logo"
-                    onerror="this.onerror=null;this.src='teams/${team}.svg'"
-                >
+                <img src="teams/${team}.webp"
+                     class="team-toggle-logo"
+                     onerror="this.onerror=null;this.src='teams/${team}.svg'">
                 <div class="team-toggle-name">${cap(t.name)}</div>
             `;
-    
+
             btn.onclick=()=>{
                 GM_TEAM=team;
                 document.querySelectorAll(".team-toggle-btn")
@@ -135,34 +124,77 @@ function buildModeTabs(_, teamsJSON){
                 btn.classList.add("active");
                 render();
             };
-    
+
             teamWrapper.appendChild(btn);
         });
     }
-
     loadTeamButtons();
+
+    // ================= OT TOGGLE =================
+    const otWrap=document.createElement("div");
+    otWrap.style.display="flex";
+    otWrap.style.justifyContent="center";
+    otWrap.style.gap="12px";
+    otWrap.style.margin="15px 0";
+
+    const otInc=document.createElement("button");
+    otInc.textContent="Overtime Included";
+    otInc.className="gm-view-btn active";
+
+    const otNo=document.createElement("button");
+    otNo.textContent="No Overtime";
+    otNo.className="gm-view-btn";
+
+    otWrap.appendChild(otInc);
+    otWrap.appendChild(otNo);
+    teamWrapper.after(otWrap);
+
+    otInc.onclick=()=>{
+        OT_MODE="include";
+        otInc.classList.add("active");
+        otNo.classList.remove("active");
+        render();
+    };
+
+    otNo.onclick=()=>{
+        OT_MODE="no";
+        otNo.classList.add("active");
+        otInc.classList.remove("active");
+        render();
+    };
 
     // ================= VS DROPDOWNS =================
     Object.entries(teams)
-      .filter(([k,t]) => t.active !== false)
-      .forEach(([k,t])=>{
-          teamDD.innerHTML += `<option value="${k}">${cap(t.name)}</option>`;
-          oppDD.innerHTML += `<option value="${k}">${cap(t.name)}</option>`;
-      });
+    .filter(([k,t])=>t.active!==false)
+    .forEach(([k,t])=>{
+        teamDD.innerHTML+=`<option value="${k}">${cap(t.name)}</option>`;
+        oppDD.innerHTML+=`<option value="${k}">${cap(t.name)}</option>`;
+    });
 
-    teamDD.onchange = () => { GM_TEAM = teamDD.value; render(); };
-    oppDD.onchange = () => { GM_OPP = oppDD.value; render(); };
+    teamDD.onchange=()=>{GM_TEAM=teamDD.value;render();};
+    oppDD.onchange=()=>{GM_OPP=oppDD.value;render();};
 
-    // ================= RENDER PLAYER CARDS =================
+    // ================= RENDER =================
     function render(){
 
-        if(!GM_MAP || !GM_TEAM) return;
-        if(VIEW==="vs" && !GM_OPP) return;
+        if(!GM_MAP||!GM_TEAM) return;
+        if(VIEW==="vs"&&!GM_OPP) return;
 
-        let rows = window.matchData.filter(m=>{
-            return norm(m.map) === norm(GM_MAP)
-                && norm(m.team) === norm(GM_TEAM)
-                && (VIEW==="overall" || norm(m.opponent) === norm(GM_OPP));
+        let rows=window.matchData.filter(m=>{
+            const base=
+                norm(m.map)===norm(GM_MAP)&&
+                norm(m.team)===norm(GM_TEAM)&&
+                (VIEW==="overall"||norm(m.opponent)===norm(GM_OPP));
+
+            if(!base) return false;
+
+            if(OT_MODE==="no"){
+                const ts=Number(m.teamScore)||0;
+                const os=Number(m.oppScore)||0;
+                if(ts+os>24) return false;
+            }
+
+            return true;
         });
 
         if(!rows.length){
@@ -170,9 +202,47 @@ function buildModeTabs(_, teamsJSON){
             return;
         }
 
-        const players=[...new Set(rows.map(r=>r.player))];
+        // ===== OT SUMMARY (DEDUPED MAPS) =====
+        const otRows=rows.filter(r=>{
+            const ts=Number(r.teamScore)||0;
+            const os=Number(r.oppScore)||0;
+            return ts+os>24;
+        });
 
-        let html=`<div class="player-cards">`;
+        const seen=new Set();
+        const uniqueOT=[];
+
+        otRows.forEach(r=>{
+            const key=r.matchID+"-"+r.mapNumber;
+            if(!seen.has(key)){
+                seen.add(key);
+                uniqueOT.push(r);
+            }
+        });
+
+        const otCount={};
+        uniqueOT.forEach(r=>{
+            const o=norm(r.opponent);
+            otCount[o]=(otCount[o]||0)+1;
+        });
+
+        const otSummary=Object.entries(otCount)
+            .map(([o,c])=>`${o} x${c}`)
+            .join(", ");
+
+        let html="";
+
+        if(OT_MODE==="include" && otSummary){
+            html+=`
+                <div style="text-align:center;font-weight:bold;margin-bottom:10px;">
+                    OT vs: ${otSummary}
+                </div>
+            `;
+        }
+
+        // ===== PLAYER CARDS =====
+        const players=[...new Set(rows.map(r=>r.player))];
+        html+=`<div class="player-cards">`;
 
         players.forEach(p=>{
             const pr=rows.filter(r=>norm(r.player)===norm(p));
@@ -186,7 +256,6 @@ function buildModeTabs(_, teamsJSON){
             html+=`
             <div class="player-card">
                 <h3>${cap(p)}</h3>
-
                 <div class="stat-grid">
                     <div>Kills: <b>${avg("kills")}</b></div>
                     <div>Deaths: <b>${avg("deaths")}</b></div>
@@ -198,12 +267,10 @@ function buildModeTabs(_, teamsJSON){
                     <div>Opening D: <b>${avg("openingDeaths")}</b></div>
                     <div>Clutches: <b>${avg("clutches")}</b></div>
                 </div>
-
                 <div class="stat-footer">
                     Maps Played: ${g}
                 </div>
-            </div>
-            `;
+            </div>`;
         });
 
         html+="</div>";
@@ -211,4 +278,4 @@ function buildModeTabs(_, teamsJSON){
     }
 }
 
-window.buildModeTabs = buildModeTabs;
+window.buildModeTabs=buildModeTabs;
