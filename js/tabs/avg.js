@@ -3,6 +3,7 @@
 // Overall + Vs Opponent + Player Cards + Team Logos
 // + Overtime Toggle (JS-only)
 // + Correct OT Opponent Summary (deduped maps)
+// + ACTIVE ROSTER FILTER (NEW)
 // ============================================================
 
 window.matchData = [];
@@ -202,7 +203,7 @@ function buildModeTabs(_, teamsJSON){
             return;
         }
 
-        // ===== OT SUMMARY (DEDUPED MAPS) =====
+        // ===== OT SUMMARY =====
         const otRows=rows.filter(r=>{
             const ts=Number(r.teamScore)||0;
             const os=Number(r.oppScore)||0;
@@ -240,8 +241,13 @@ function buildModeTabs(_, teamsJSON){
             `;
         }
 
-        // ===== PLAYER CARDS =====
-        const players=[...new Set(rows.map(r=>r.player))];
+        // ===== ACTIVE ROSTER FILTER (NEW) =====
+        const teamRoster = teams[GM_TEAM]?.players || [];
+        const activeRoster = teamRoster.map(p => norm(p));
+
+        const players = [...new Set(rows.map(r => r.player))]
+            .filter(p => activeRoster.includes(norm(p)));
+
         html+=`<div class="player-cards">`;
 
         players.forEach(p=>{
