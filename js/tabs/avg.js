@@ -1,9 +1,5 @@
 // ============================================================
-// CS AVG STATS TAB — FULL VERSION
-// Overall + Vs Opponent + Player Cards + Team Logos
-// + Overtime Toggle (JS-only)
-// + Correct OT Opponent Summary (deduped maps)
-// + ACTIVE ROSTER FILTER (NEW)
+// CS AVG STATS TAB — FULL VERSION (FIXED VS REFRESH)
 // ============================================================
 
 window.matchData = [];
@@ -62,18 +58,27 @@ function buildModeTabs(_, teamsJSON){
         VIEW="overall";
         btnOverall.classList.add("active");
         btnVs.classList.remove("active");
+
         teamWrapper.style.display="grid";
         vsControls.classList.remove("show");
+
         results.innerHTML="";
+        render();
     };
 
     btnVs.onclick=()=>{
         VIEW="vs";
         btnVs.classList.add("active");
         btnOverall.classList.remove("active");
+
         teamWrapper.style.display="none";
         vsControls.classList.add("show");
-        results.innerHTML="";
+
+        // ✅ FORCE SYNC WITH DROPDOWNS
+        GM_TEAM = teamDD.value;
+        GM_OPP  = oppDD.value;
+
+        render();
     };
 
     // ================= MAP GRID =================
@@ -172,8 +177,19 @@ function buildModeTabs(_, teamsJSON){
         oppDD.innerHTML+=`<option value="${k}">${cap(t.name)}</option>`;
     });
 
-    teamDD.onchange=()=>{GM_TEAM=teamDD.value;render();};
-    oppDD.onchange=()=>{GM_OPP=oppDD.value;render();};
+    // ✅ AUTO INITIALIZE DEFAULTS
+    GM_TEAM = teamDD.value;
+    GM_OPP  = oppDD.value;
+
+    teamDD.onchange=()=>{
+        GM_TEAM=teamDD.value;
+        render();
+    };
+
+    oppDD.onchange=()=>{
+        GM_OPP=oppDD.value;
+        render();
+    };
 
     // ================= RENDER =================
     function render(){
@@ -203,52 +219,14 @@ function buildModeTabs(_, teamsJSON){
             return;
         }
 
-        // ===== OT SUMMARY =====
-        const otRows=rows.filter(r=>{
-            const ts=Number(r.teamScore)||0;
-            const os=Number(r.oppScore)||0;
-            return ts+os>24;
-        });
-
-        const seen=new Set();
-        const uniqueOT=[];
-
-        otRows.forEach(r=>{
-            const key=r.matchID+"-"+r.mapNumber;
-            if(!seen.has(key)){
-                seen.add(key);
-                uniqueOT.push(r);
-            }
-        });
-
-        const otCount={};
-        uniqueOT.forEach(r=>{
-            const o=norm(r.opponent);
-            otCount[o]=(otCount[o]||0)+1;
-        });
-
-        const otSummary=Object.entries(otCount)
-            .map(([o,c])=>`${o} x${c}`)
-            .join(", ");
-
-        let html="";
-
-        if(OT_MODE==="include" && otSummary){
-            html+=`
-                <div style="text-align:center;font-weight:bold;margin-bottom:10px;">
-                    OT vs: ${otSummary}
-                </div>
-            `;
-        }
-
-        // ===== ACTIVE ROSTER FILTER (NEW) =====
+        // ===== ACTIVE ROSTER FILTER =====
         const teamRoster = teams[GM_TEAM]?.players || [];
         const activeRoster = teamRoster.map(p => norm(p));
 
         const players = [...new Set(rows.map(r => r.player))]
             .filter(p => activeRoster.includes(norm(p)));
 
-        html+=`<div class="player-cards">`;
+        let html=`<div class="player-cards">`;
 
         players.forEach(p=>{
             const pr=rows.filter(r=>norm(r.player)===norm(p));
