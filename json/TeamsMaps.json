@@ -12,7 +12,7 @@
       },
       "furia": {
         "name": "furia",
-        "active": true,
+        "active": false,
         "players": ["falleN", "yuurih", "YEKINDAR", "KSCERATO", "molodoy"]
       },
       "liquid": {
@@ -27,7 +27,7 @@
       },
       "aurora": {
         "name": "aurora",
-        "active": true,
+        "active": false,
         "players": ["MAJ3R", "XANTARES", "woxic", "soulfly", "Wicadia"]
       },
       "spirit": {
@@ -42,7 +42,7 @@
       },
       "navi": {
         "name": "natus vincere",
-        "active": true,
+        "active": false,
         "players": ["Aleksib", "iM", "b1t", "w0nderful", "makazze"]
       },
       "mongolz": {
@@ -52,7 +52,7 @@
       },
       "falcons": {
         "name": "falcons",
-        "active": true,
+        "active": false,
         "players": ["kyousuke", "NiKo", "m0NESY", "TeSeS", "kyxsan"]
       },
       "astralis": {
