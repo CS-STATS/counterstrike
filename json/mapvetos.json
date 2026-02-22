@@ -1160,5 +1160,33 @@
             "Pick2: dust2",
             "Ban3: nuke"
         ]
+    },
+    {
+        "Decider": "nuke",
+        "Series": "BO3",
+        "mongolz": [
+            "Ban1: anubis",
+            "Pick1: mirage",
+            "Ban4: overpass"
+        ],
+        "mouz": [
+            "Ban2: ancient",
+            "Pick2: inferno",
+            "Ban3: dust2"
+        ]
+    },
+    {
+        "Decider": "anubis",
+        "Series": "BO5",
+        "parivision": [
+            "Ban2: nuke",
+            "Pick2: dust2",
+            "Pick4: mirage"
+        ],
+        "vitality": [
+            "Ban1: ancient",
+            "Pick1: overpass",
+            "Pick3: inferno"
+        ]
     }
 ]
