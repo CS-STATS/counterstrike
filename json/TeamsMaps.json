@@ -2,17 +2,17 @@
     "teams": {
       "faze": {
         "name": "faze",
-        "active": false,
+        "active": true,
         "players": ["karrigan", "frozen", "twistzz", "broky", "jcobb"]
       },
       "vitality": {
         "name": "vitality",
-        "active": true,
+        "active": false,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
         "name": "furia",
-        "active": false,
+        "active": true,
         "players": ["falleN", "yuurih", "YEKINDAR", "KSCERATO", "molodoy"]
       },
       "liquid": {
@@ -27,22 +27,22 @@
       },
       "aurora": {
         "name": "aurora",
-        "active": false,
+        "active": true,
         "players": ["MAJ3R", "XANTARES", "woxic", "soulfly", "Wicadia"]
       },
       "spirit": {
         "name": "spirit",
-        "active": false,
+        "active": true,
         "players": ["sh1ro", "magixx", "tN1R", "zont1x", "donk"]
       },
       "g2": {
         "name": "g2",
-        "active": false,
+        "active": true,
         "players": ["huNter-", "malbsMd", "SunPayus", "HeavyGod", "MATYS"]
       },
       "navi": {
         "name": "natus vincere",
-        "active": false,
+        "active": true,
         "players": ["Aleksib", "iM", "b1t", "w0nderful", "makazze"]
       },
       "mongolz": {
@@ -57,17 +57,17 @@
       },
       "astralis": {
         "name": "astralis",
-        "active": false,
+        "active": true,
         "players": ["HooXi", "phzy", "jabbi", "Staehr", "ryu"]
       },
       "parivision": {
         "name": "parivision",
-        "active": true,
+        "active": false,
         "players": ["jame", "BELCHONOKK", "xiELO", "nota", "zweih"]
       },
       "3dmax": {
         "name": "3dmax",
-        "active": false,
+        "active": true,
         "players": ["bodyy", "Maka", "Lucky", "Ex3rcice", "Graviti"]
       },
       "passion": {
@@ -77,17 +77,17 @@
       },
       "fut": {
         "name": "fut",
-        "active": false,
+        "active": true,
         "players": ["dem0n", "lauNX", "Krabeni", "cmtry", "dziugss"]
       },
       "b8": {
         "name": "b8",
-        "active": false,
+        "active": true,
         "players": ["alex666", "npl", "kensizor", "esenthial", "s1zzi"]
       },
       "pain": {
         "name": "pain",
-        "active": false,
+        "active": true,
         "players": ["vsm", "biguzera", "piriajr", "nqz", "snow"]
       },
       "bc.game": {
@@ -107,8 +107,18 @@
       },
       "heroic": {
         "name": "heroic",
-        "active": false,
+        "active": true,
         "players": ["nilo", "xflOud", "yxngstxr", "Chr1zN", "susp"]
+      },
+      "legacy": {
+        "name": "legacy",
+        "active": true,
+        "players": ["arT", "dumau", "latto", "n1sssim", "saadzin"]
+      },
+      "monte": {
+        "name": "monte",
+        "active": true,
+        "players": ["Rainwaker", "Bymas", "afro", "Gizmy", "AZUWU"]
       }
     },
   
