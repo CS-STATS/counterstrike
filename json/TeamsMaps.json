@@ -22,7 +22,7 @@
       },
       "mouz": {
         "name": "mouz",
-        "active": true,
+        "active": false,
         "players": ["Brollan", "torzi", "Spinx", "jimpphat", "xertioN"]
       },
       "aurora": {
@@ -32,7 +32,7 @@
       },
       "spirit": {
         "name": "spirit",
-        "active": true,
+        "active": false,
         "players": ["sh1ro", "magixx", "tN1R", "zont1x", "donk"]
       },
       "g2": {
@@ -47,7 +47,7 @@
       },
       "mongolz": {
         "name": "the mongolz",
-        "active": true,
+        "active": false,
         "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
       },
       "falcons": {
@@ -112,7 +112,7 @@
       },
       "legacy": {
         "name": "legacy",
-        "active": true,
+        "active": false,
         "players": ["arT", "dumau", "latto", "n1sssim", "saadzin"]
       },
       "monte": {
