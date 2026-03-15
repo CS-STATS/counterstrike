@@ -2,27 +2,27 @@
     "teams": {
       "faze": {
         "name": "faze",
-        "active": false,
+        "active": true,
         "players": ["karrigan", "frozen", "twistzz", "broky", "jcobb"]
       },
       "vitality": {
         "name": "vitality",
-        "active": false,
+        "active": true,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
         "name": "furia",
-        "active": false,
+        "active": true,
         "players": ["falleN", "yuurih", "YEKINDAR", "KSCERATO", "molodoy"]
       },
       "liquid": {
         "name": "liquid",
-        "active": false,
+        "active": true,
         "players": ["Krimbo", "EliGE", "NertZ", "siuhy", "ultimate"]
       },
       "mouz": {
         "name": "mouz",
-        "active": false,
+        "active": true,
         "players": ["Brollan", "torzi", "Spinx", "jimpphat", "xertioN"]
       },
       "aurora": {
@@ -32,12 +32,12 @@
       },
       "spirit": {
         "name": "spirit",
-        "active": false,
+        "active": true,
         "players": ["sh1ro", "magixx", "tN1R", "zont1x", "donk"]
       },
       "g2": {
         "name": "g2",
-        "active": false,
+        "active": true,
         "players": ["huNter-", "malbsMd", "SunPayus", "HeavyGod", "MATYS"]
       },
       "navi": {
@@ -47,12 +47,12 @@
       },
       "mongolz": {
         "name": "the mongolz",
-        "active": false,
+        "active": true,
         "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
       },
       "falcons": {
         "name": "falcons",
-        "active": false,
+        "active": true,
         "players": ["kyousuke", "NiKo", "m0NESY", "TeSeS", "kyxsan"]
       },
       "astralis": {
@@ -62,17 +62,17 @@
       },
       "parivision": {
         "name": "parivision",
-        "active": false,
+        "active": true,
         "players": ["jame", "BELCHONOKK", "xiELO", "nota", "zweih"]
       },
       "3dmax": {
         "name": "3dmax",
-        "active": false,
+        "active": true,
         "players": ["misutaaa", "Maka", "Lucky", "Ex3rcice", "Graviti"]
       },
       "passion": {
         "name": "passion UA",
-        "active": false,
+        "active": true,
         "players": ["jT", "hallzerk", "Grim", "Kvem", "nicx"]
       },
       "fut": {
@@ -82,42 +82,42 @@
       },
       "b8": {
         "name": "b8",
-        "active": false,
+        "active": true,
         "players": ["alex666", "npl", "kensizor", "esenthial", "s1zzi"]
       },
       "pain": {
         "name": "pain",
-        "active": false,
+        "active": true,
         "players": ["vsm", "biguzera", "piriajr", "nqz", "snow"]
       },
       "bc.game": {
         "name": "bc.game",
-        "active": false,
+        "active": true,
         "players": ["krazy", "s1mple", "electroNic", "aragornN", "MUTiRiS"]
       },
       "nrg": {
         "name": "nrg",
-        "active": false,
+        "active": true,
         "players": ["Sonic", "brO", "oSee", "jeorge", "nitrO"]
       },
       "gamerlegion": {
         "name": "gamerlegion",
-        "active": false,
+        "active": true,
         "players": ["Snax", "REZ", "Tauson", "PR", "hypex"]
       },
       "heroic": {
         "name": "heroic",
-        "active": false,
+        "active": true,
         "players": ["nilo", "xflOud", "yxngstxr", "Chr1zN", "susp"]
       },
       "legacy": {
         "name": "legacy",
-        "active": false,
+        "active": true,
         "players": ["arT", "dumau", "latto", "n1sssim", "saadzin"]
       },
       "monte": {
         "name": "monte",
-        "active": false,
+        "active": true,
         "players": ["Rainwaker", "Bymas", "afro", "Gizmy", "AZUWU"]
       }
     },
