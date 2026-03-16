@@ -37,7 +37,7 @@
       },
       "g2": {
         "name": "g2",
-        "active": true,
+        "active": false,
         "players": ["huNter-", "malbsMd", "SunPayus", "HeavyGod", "MATYS"]
       },
       "navi": {
@@ -57,7 +57,7 @@
       },
       "astralis": {
         "name": "astralis",
-        "active": true,
+        "active": false,
         "players": ["HooXi", "phzy", "jabbi", "Staehr", "ryu"]
       },
       "parivision": {
@@ -67,17 +67,17 @@
       },
       "3dmax": {
         "name": "3dmax",
-        "active": true,
+        "active": false,
         "players": ["misutaaa", "Maka", "Lucky", "Ex3rcice", "Graviti"]
       },
       "passion": {
         "name": "passion UA",
-        "active": true,
+        "active": false,
         "players": ["jT", "hallzerk", "Grim", "Kvem", "nicx"]
       },
       "fut": {
         "name": "fut",
-        "active": true,
+        "active": false,
         "players": ["dem0n", "lauNX", "Krabeni", "cmtry", "dziugss"]
       },
       "b8": {
@@ -87,12 +87,12 @@
       },
       "pain": {
         "name": "pain",
-        "active": true,
+        "active": false,
         "players": ["vsm", "biguzera", "piriajr", "nqz", "snow"]
       },
       "bc.game": {
         "name": "bc.game",
-        "active": true,
+        "active": false,
         "players": ["krazy", "s1mple", "electroNic", "aragornN", "MUTiRiS"]
       },
       "nrg": {
@@ -102,23 +102,38 @@
       },
       "gamerlegion": {
         "name": "gamerlegion",
-        "active": true,
+        "active": false,
         "players": ["Snax", "REZ", "Tauson", "PR", "hypex"]
       },
       "heroic": {
         "name": "heroic",
-        "active": true,
+        "active": false,
         "players": ["nilo", "xflOud", "yxngstxr", "Chr1zN", "susp"]
       },
       "legacy": {
         "name": "legacy",
-        "active": true,
+        "active": false,
         "players": ["arT", "dumau", "latto", "n1sssim", "saadzin"]
       },
       "monte": {
         "name": "monte",
-        "active": true,
+        "active": false,
         "players": ["Rainwaker", "Bymas", "afro", "Gizmy", "AZUWU"]
+      },
+      "nip": {
+        "name": "ninjas in pyjamas",
+        "active": true,
+        "players": ["Snappi", "sjuush", "r1nkle", "xKacpersky", "cairne"]
+      },
+      "9z": {
+        "name": "9z",
+        "active": true,
+        "players": ["max", "dgt", "meyern", "luchov", "HUASOPEEK"]
+      },
+      "tyloo": {
+        "name": "tyloo",
+        "active": true,
+        "players": ["JamYoung", "Jee", "Mercury", "Moseyuh", "Zero"]
       }
     },
   
