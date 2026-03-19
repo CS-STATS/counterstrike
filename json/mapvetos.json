@@ -1762,5 +1762,61 @@
             "Pick1: mirage",
             "Pick3: nuke"
         ]
+    },
+    {
+        "Decider": "anubis",
+        "Series": "BO3",
+        "falcons": [
+            "Ban2: overpass",
+            "Pick2: dust2",
+            "Ban4: inferno"
+        ],
+        "nrg": [
+            "Ban1: nuke",
+            "Pick1: ancient",
+            "Ban3: mirage"
+        ]
+    },
+    {
+        "Decider": "dust2",
+        "Series": "BO3",
+        "b8": [
+            "Ban1: anubis",
+            "Pick1: mirage",
+            "Ban3: inferno"
+        ],
+        "navi": [
+            "Ban2: overpass",
+            "Pick2: ancient",
+            "Ban4: nuke"
+        ]
+    },
+    {
+        "Decider": "dust2",
+        "Series": "BO3",
+        "aurora": [
+            "Ban2: ancient",
+            "Pick2: inferno",
+            "Ban4: mirage"
+        ],
+        "faze": [
+            "Ban1: anubis",
+            "Pick1: nuke",
+            "Ban3: overpass"
+        ]
+    },
+    {
+        "Decider": "inferno",
+        "Series": "BO3",
+        "furia": [
+            "Ban2: ancient",
+            "Pick2: overpass",
+            "Ban4: anubis"
+        ],
+        "tyloo": [
+            "Ban1: dust2",
+            "Pick1: mirage",
+            "Ban3: nuke"
+        ]
     }
 ]
