@@ -7,7 +7,7 @@
       },
       "vitality": {
         "name": "vitality",
-        "active": true,
+        "active": false,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
@@ -17,12 +17,12 @@
       },
       "liquid": {
         "name": "liquid",
-        "active": true,
-        "players": ["Krimbo", "EliGE", "NertZ", "siuhy", "ultimate"]
+        "active": false,
+        "players": ["NAF", "EliGE", "malbsMd", "siuhy", "ultimate"]
       },
       "mouz": {
         "name": "mouz",
-        "active": true,
+        "active": false,
         "players": ["Brollan", "torzi", "Spinx", "jimpphat", "xertioN"]
       },
       "aurora": {
@@ -32,7 +32,7 @@
       },
       "spirit": {
         "name": "spirit",
-        "active": true,
+        "active": false,
         "players": ["sh1ro", "magixx", "tN1R", "zont1x", "donk"]
       },
       "g2": {
@@ -47,7 +47,7 @@
       },
       "mongolz": {
         "name": "the mongolz",
-        "active": true,
+        "active": false,
         "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
       },
       "falcons": {
@@ -62,7 +62,7 @@
       },
       "parivision": {
         "name": "parivision",
-        "active": true,
+        "active": false,
         "players": ["jame", "BELCHONOKK", "xiELO", "nota", "zweih"]
       },
       "3dmax": {
@@ -122,12 +122,12 @@
       },
       "nip": {
         "name": "ninjas in pyjamas",
-        "active": true,
+        "active": false,
         "players": ["Snappi", "sjuush", "r1nkle", "xKacpersky", "cairne"]
       },
       "9z": {
         "name": "9z",
-        "active": true,
+        "active": false,
         "players": ["max", "dgt", "meyern", "luchov", "HUASOPEEK"]
       },
       "tyloo": {

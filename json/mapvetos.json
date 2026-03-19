@@ -1818,5 +1818,61 @@
             "Pick1: mirage",
             "Ban3: nuke"
         ]
+    },
+    {
+        "Decider": "dust2",
+        "Series": "BO3",
+        "nip": [
+            "Ban1: inferno",
+            "Pick1: ancient",
+            "Ban3: overpass"
+        ],
+        "parivision": [
+            "Ban2: nuke",
+            "Pick2: mirage",
+            "Ban4: anubis"
+        ]
+    },
+    {
+        "Decider": "dust2",
+        "Series": "BO3",
+        "liquid": [
+            "Ban1: overpass",
+            "Pick1: mirage",
+            "Ban3: anubis"
+        ],
+        "spirit": [
+            "Ban2: inferno",
+            "Pick2: ancient",
+            "Ban4: nuke"
+        ]
+    },
+    {
+        "Decider": "mirage",
+        "Series": "BO3",
+        "mongolz": [
+            "Ban1: overpass",
+            "Pick1: nuke",
+            "Ban3: dust2"
+        ],
+        "mouz": [
+            "Ban2: anubis",
+            "Pick2: inferno",
+            "Ban4: ancient"
+        ]
+    },
+    {
+        "9z": [
+            "Ban1: anubis",
+            "Pick1: overpass",
+            "Ban3: dust2"
+        ],
+        "Decider": "inferno",
+        "Series": "BO3",
+        "vitality": [
+            "Ban2: ancient",
+            "Pick2: nuke",
+            "Ban4: mirage"
+        ]
     }
 ]
