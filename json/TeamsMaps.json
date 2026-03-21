@@ -12,7 +12,7 @@
       },
       "furia": {
         "name": "furia",
-        "active": false,
+        "active": true,
         "players": ["falleN", "yuurih", "YEKINDAR", "KSCERATO", "molodoy"]
       },
       "liquid": {
@@ -22,7 +22,7 @@
       },
       "mouz": {
         "name": "mouz",
-        "active": true,
+        "active": false,
         "players": ["Brollan", "torzi", "Spinx", "jimpphat", "xertioN"]
       },
       "aurora": {
@@ -47,12 +47,12 @@
       },
       "mongolz": {
         "name": "the mongolz",
-        "active": true,
+        "active": false,
         "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
       },
       "falcons": {
         "name": "falcons",
-        "active": false,
+        "active": true,
         "players": ["kyousuke", "NiKo", "m0NESY", "TeSeS", "kyxsan"]
       },
       "astralis": {
@@ -62,7 +62,7 @@
       },
       "parivision": {
         "name": "parivision",
-        "active": true,
+        "active": false,
         "players": ["jame", "BELCHONOKK", "xiELO", "nota", "zweih"]
       },
       "3dmax": {
@@ -97,7 +97,7 @@
       },
       "nrg": {
         "name": "nrg",
-        "active": false,
+        "active": true,
         "players": ["Sonic", "brO", "oSee", "Grim", "nitrO"]
       },
       "gamerlegion": {
@@ -122,7 +122,7 @@
       },
       "nip": {
         "name": "ninjas in pyjamas",
-        "active": true,
+        "active": false,
         "players": ["Snappi", "sjuush", "r1nkle", "xKacpersky", "cairne"]
       },
       "9z": {
@@ -132,7 +132,7 @@
       },
       "tyloo": {
         "name": "tyloo",
-        "active": false,
+        "active": true,
         "players": ["JamYoung", "Jee", "Mercury", "Moseyuh", "Zero"]
       }
     },
