@@ -7,7 +7,7 @@
       },
       "vitality": {
         "name": "vitality",
-        "active": true,
+        "active": false,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
@@ -47,7 +47,7 @@
       },
       "mongolz": {
         "name": "the mongolz",
-        "active": false,
+        "active": true,
         "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
       },
       "falcons": {
