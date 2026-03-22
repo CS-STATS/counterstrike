@@ -1986,5 +1986,61 @@
             "Pick2: overpass",
             "Ban4: nuke"
         ]
+    },
+    {
+        "Decider": "mirage",
+        "Series": "BO3",
+        "falcons": [
+            "Ban2: overpass",
+            "Pick2: ancient",
+            "Ban4: nuke"
+        ],
+        "tyloo": [
+            "Ban1: dust2",
+            "Pick1: inferno",
+            "Ban3: anubis"
+        ]
+    },
+    {
+        "Decider": "dust2",
+        "Series": "BO3",
+        "furia": [
+            "Ban2: ancient",
+            "Pick2: nuke",
+            "Ban4: inferno"
+        ],
+        "nrg": [
+            "Ban1: overpass",
+            "Pick1: mirage",
+            "Ban3: anubis"
+        ]
+    },
+    {
+        "Decider": "nuke",
+        "Series": "BO3",
+        "liquid": [
+            "Ban1: overpass",
+            "Pick1: ancient",
+            "Ban3: inferno"
+        ],
+        "mongolz": [
+            "Ban2: anubis",
+            "Pick2: mirage",
+            "Ban4: dust2"
+        ]
+    },
+    {
+        "9z": [
+            "Ban1: anubis",
+            "Pick1: overpass",
+            "Ban3: mirage"
+        ],
+        "Decider": "nuke",
+        "Series": "BO3",
+        "spirit": [
+            "Ban2: inferno",
+            "Pick2: dust2",
+            "Ban4: ancient"
+        ]
     }
 ]

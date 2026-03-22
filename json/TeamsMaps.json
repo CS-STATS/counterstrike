@@ -7,7 +7,7 @@
       },
       "vitality": {
         "name": "vitality",
-        "active": false,
+        "active": true,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
@@ -17,7 +17,7 @@
       },
       "liquid": {
         "name": "liquid",
-        "active": true,
+        "active": false,
         "players": ["NAF", "EliGE", "malbsMd", "siuhy", "ultimate"]
       },
       "mouz": {
@@ -27,7 +27,7 @@
       },
       "aurora": {
         "name": "aurora",
-        "active": false,
+        "active": true,
         "players": ["MAJ3R", "XANTARES", "woxic", "soulfly", "Wicadia"]
       },
       "spirit": {
@@ -42,7 +42,7 @@
       },
       "navi": {
         "name": "natus vincere",
-        "active": false,
+        "active": true,
         "players": ["Aleksib", "iM", "b1t", "w0nderful", "makazze"]
       },
       "mongolz": {
@@ -62,7 +62,7 @@
       },
       "parivision": {
         "name": "parivision",
-        "active": false,
+        "active": true,
         "players": ["jame", "BELCHONOKK", "xiELO", "nota", "zweih"]
       },
       "3dmax": {
@@ -97,7 +97,7 @@
       },
       "nrg": {
         "name": "nrg",
-        "active": true,
+        "active": false,
         "players": ["Sonic", "brO", "oSee", "Grim", "nitrO"]
       },
       "gamerlegion": {
@@ -127,12 +127,12 @@
       },
       "9z": {
         "name": "9z",
-        "active": true,
+        "active": false,
         "players": ["max", "dgt", "meyern", "luchov", "HUASOPEEK"]
       },
       "tyloo": {
         "name": "tyloo",
-        "active": true,
+        "active": false,
         "players": ["JamYoung", "Jee", "Mercury", "Moseyuh", "Zero"]
       }
     },
