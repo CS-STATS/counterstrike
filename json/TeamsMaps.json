@@ -7,12 +7,12 @@
       },
       "vitality": {
         "name": "vitality",
-        "active": true,
+        "active": false,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
         "name": "furia",
-        "active": true,
+        "active": false,
         "players": ["falleN", "yuurih", "YEKINDAR", "KSCERATO", "molodoy"]
       },
       "liquid": {
@@ -32,7 +32,7 @@
       },
       "spirit": {
         "name": "spirit",
-        "active": true,
+        "active": false,
         "players": ["sh1ro", "magixx", "tN1R", "zont1x", "donk"]
       },
       "g2": {
@@ -42,7 +42,7 @@
       },
       "navi": {
         "name": "natus vincere",
-        "active": true,
+        "active": false,
         "players": ["Aleksib", "iM", "b1t", "w0nderful", "makazze"]
       },
       "mongolz": {
