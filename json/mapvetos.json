@@ -2084,5 +2084,33 @@
             "Pick2: overpass",
             "Ban4: ancient"
         ]
+    },
+    {
+        "Decider": "dust2",
+        "Series": "BO3",
+        "aurora": [
+            "Ban1: ancient",
+            "Pick1: inferno",
+            "Ban3: nuke"
+        ],
+        "mongolz": [
+            "Ban2: anubis",
+            "Pick2: mirage",
+            "Ban4: overpass"
+        ]
+    },
+    {
+        "Decider": "anubis",
+        "Series": "BO3",
+        "falcons": [
+            "Ban1: overpass",
+            "Pick1: mirage",
+            "Ban3: dust2"
+        ],
+        "parivision": [
+            "Ban2: nuke",
+            "Pick2: ancient",
+            "Ban4: inferno"
+        ]
     }
 ]

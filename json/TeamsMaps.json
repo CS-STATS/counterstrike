@@ -7,7 +7,7 @@
       },
       "vitality": {
         "name": "vitality",
-        "active": false,
+        "active": true,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
@@ -42,17 +42,17 @@
       },
       "navi": {
         "name": "natus vincere",
-        "active": false,
+        "active": true,
         "players": ["Aleksib", "iM", "b1t", "w0nderful", "makazze"]
       },
       "mongolz": {
         "name": "the mongolz",
-        "active": true,
+        "active": false,
         "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
       },
       "falcons": {
         "name": "falcons",
-        "active": true,
+        "active": false,
         "players": ["kyousuke", "NiKo", "m0NESY", "TeSeS", "kyxsan"]
       },
       "astralis": {
