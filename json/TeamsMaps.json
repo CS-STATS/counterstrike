@@ -2,12 +2,12 @@
     "teams": {
       "faze": {
         "name": "faze",
-        "active": false,
+        "active": true,
         "players": ["karrigan", "frozen", "twistzz", "broky", "jcobb"]
       },
       "vitality": {
         "name": "vitality",
-        "active": true,
+        "active": false,
         "players": ["apEX", "ropz", "ZywOo", "flameZ", "mezii"]
       },
       "furia": {
@@ -27,7 +27,7 @@
       },
       "aurora": {
         "name": "aurora",
-        "active": true,
+        "active": false,
         "players": ["MAJ3R", "XANTARES", "woxic", "soulfly", "Wicadia"]
       },
       "spirit": {
@@ -42,12 +42,12 @@
       },
       "navi": {
         "name": "natus vincere",
-        "active": true,
+        "active": false,
         "players": ["Aleksib", "iM", "b1t", "w0nderful", "makazze"]
       },
       "mongolz": {
         "name": "the mongolz",
-        "active": false,
+        "active": true,
         "players": ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
       },
       "falcons": {
@@ -57,7 +57,7 @@
       },
       "astralis": {
         "name": "astralis",
-        "active": false,
+        "active": true,
         "players": ["HooXi", "phzy", "jabbi", "Staehr", "ryu"]
       },
       "parivision": {
@@ -67,7 +67,7 @@
       },
       "3dmax": {
         "name": "3dmax",
-        "active": false,
+        "active": true,
         "players": ["misutaaa", "Maka", "Lucky", "Ex3rcice", "Graviti"]
       },
       "passion": {
@@ -77,7 +77,7 @@
       },
       "fut": {
         "name": "fut",
-        "active": false,
+        "active": true,
         "players": ["dem0n", "lauNX", "Krabeni", "cmtry", "dziugss"]
       },
       "b8": {
@@ -97,7 +97,7 @@
       },
       "nrg": {
         "name": "nrg",
-        "active": false,
+        "active": true,
         "players": ["Sonic", "brO", "oSee", "Grim", "nitrO"]
       },
       "gamerlegion": {
@@ -112,7 +112,7 @@
       },
       "legacy": {
         "name": "legacy",
-        "active": false,
+        "active": true,
         "players": ["arT", "dumau", "latto", "n1sssim", "saadzin"]
       },
       "monte": {
